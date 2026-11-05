@@ -1,12 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>React Boilerplate</title>
-</head>
-<body>
-<div id="root">
-</div>
-</html>
+import React from "react";
+
+const WeatherDisplay = ({ weather }) => {
+  return (
+    <div>
+      <p>
+        Temperature: <span style={{ color: weather.temperature > 20 ? "red" : "blue" }}>
+          {weather.temperature}
+        </span>
+      </p>
+
+      <p>Conditions: {weather.conditions}</p>
+    </div>
+  );
+};
+
+export default WeatherDisplay;
